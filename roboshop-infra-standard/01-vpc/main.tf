@@ -1,5 +1,5 @@
 module "vpc" {
-    source = "https://github.com/sailasroy/terraforrm-vpc-advanced.git"
+    source = "git::https://github.com/sailasroy/terraforrm-vpc-advanced.git"
     project_name = var.project_name
     cidr_block = var.cidr_block
     common_tags = var.common_tags
