@@ -21,6 +21,17 @@ pipeline {
                  '''
             }
         }
+
+          stage('Apply') {
+            steps {
+                 sh '''
+                    cd roboshop-infra-standard/01-vpc
+                    ls -ltr
+                    pwd
+                    terraform apply -auto-approve
+                 '''
+            }
+        }
        
     }
     post { 
